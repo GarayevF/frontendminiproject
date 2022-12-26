@@ -154,38 +154,37 @@ bir.addEventListener('click', function() {
                 ){
                 html += `
                 <div id="a${item.id}" class="productitem2 ${colname}">
-                <a href="productdetail.html">
-                <div class="box row">
-                        <div class="upperdiv col-lg-4">
-                            <div class="img-div">
-                                <img src=${item.image} alt="">
-                                <img src=${item.imageabs} alt="">
-                                ${item.hot == 'true' ? '<div class="hot"><h1>Hot</h1></div>' : ''} 
-                                ${item.discount != 'none' ? '<div class="discount"><h1>-'+ item.discount +'%</h1></div>' : ''} 
-                                
+                    <a href="productdetail.html">
+                        <div class="box row">
+                            <div class="upperdiv col-lg-4">
+                                <div class="img-div">
+                                    <img src=${item.image} alt="">
+                                    <img src=${item.imageabs} alt="">
+                                    ${item.hot == 'true' ? '<div class="hot"><h1>Hot</h1></div>' : ''} 
+                                    ${item.discount != 'none' ? '<div class="discount"><h1>-'+ item.discount +'%</h1></div>' : ''} 
+                                </div>
+                            </div>
+                            <div class="body-div col-lg-8 text-start">
+                                <div class="rating">
+                                    <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
+                                    <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
+                                    <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
+                                    <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
+                                    <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
+                                    <span>(${item.review} review)</span>
+                                </div>
+                                <h4>${item.title}</h4>
+                                <h3>${item.pricelt != 'none' ? '<span>$'+ item.pricelt +'</span>' : ''}$${item.price}</h3>
+                                <div class="alar">
+                                    <button class="addcard">ADD TO CART</button>
+                                    <button class="second"><i class="fa-regular fa-heart"></i></button>
+                                </div>
+                                <div class="description">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis…</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="body-div col-lg-8 text-start">
-                            <div class="rating">
-                                <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
-                                <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
-                                <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
-                                <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
-                                <i class="fa-${item.review != '0' ? 'solid' : 'regular'} fa-star"></i>
-                                <span>(${item.review} review)</span>
-                            </div>
-                            <h4>${item.title}</h4>
-                            <h3>${item.pricelt != 'none' ? '<span>$'+ item.pricelt +'</span>' : ''}$${item.price}</h3>
-                            <div class="alar">
-                                <a class="addcard" href="">ADD TO CARD</a>
-                                <button><i class="fa-regular fa-heart"></i></button>
-                            </div>
-                            <div class="description">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis…</p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+                    </a>
                 </div>
             `
             count++;
